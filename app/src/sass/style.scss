@@ -46,10 +46,14 @@ nav{
         display:inline-block;
       }
       a{
+        transition: .4s;
         padding: 15px;
         color: $blue;
         font-family: $grandHotel;
-        font-size: 32px;
+        font-size: 28px;
+        &:hover{
+          color: $orange;
+        }
         @media ( min-width : $tablet){
           display:inline-block;
           padding: 0 85px;
@@ -133,36 +137,36 @@ a{
   transform: rotate(-45deg);
 }
 .sub-title {
-    position: relative;
-    z-index: 1;
-    font-family: $grandHotel;
-    color: $blue;
-    font-size: 24px;
+  position: relative;
+  z-index: 1;
+  font-family: $grandHotel;
+  color: $blue;
+  font-size: 24px;
 
+  &:before {
+    border-top: 2px solid $orange;
+    content:"";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; left: 0; right: 0; bottom: 0;
+    width: 95%;
+    z-index: -1;
+  }
+
+  span {
+    background: #fff;
+    padding: 0 15px;
+  }
+
+  @media ( min-width: $tablet){
+    font-size: 48px;
+    margin-bottom: 35px;
     &:before {
-        border-top: 2px solid $orange;
-        content:"";
-        margin: 0 auto;
-        position: absolute;
-        top: 50%; left: 0; right: 0; bottom: 0;
-        width: 95%;
-        z-index: -1;
+      top: 100%;
+      width: 35%;
+      z-index: auto;
     }
-
-    span {
-        background: #fff;
-        padding: 0 15px;
-    }
-
-    @media ( min-width: $tablet){
-      font-size: 48px;
-      margin-bottom: 35px;
-      &:before {
-        top: 100%;
-        width: 35%;
-        z-index: auto;
-      }
-    }
+  }
 }
 .home-section{
   padding-top: 80px;
@@ -223,6 +227,7 @@ a{
 }
 
 .article-container{
+  transition: .4s;
   width: 100%;
   height: auto;
   margin: 30px 0;
@@ -230,7 +235,10 @@ a{
   border: 1px solid #ddd;
   box-shadow: 1px 1px 20px 0px #bbb;
   filter:progid:DXImageTransform.Microsoft.Shadow(color=#bbb, Direction=134, Strength=20);
-
+  &:hover{
+    background: $orange;
+    cursor: pointer;
+  }
   @media ( min-width: $tablet ){
     width: calc(38% - 3%);
     margin: 3%;
@@ -314,7 +322,7 @@ ul.social-network{
 }
 .about-us{
   color: $blue;
-  font-size: 28px;
+  font-size: 16px;
   margin: 30px 0;
   @media (max-width: $tablet + 1){
     display: none;

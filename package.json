@@ -1,7 +1,7 @@
 {
   "name": "mobile_first_benjamin",
   "version": "1.0.0",
-  "description": "Projet Mobile First Benjamin Langlade",
+  "description": "Projet mobile first Benjamin Langlade",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
